@@ -1,9 +1,8 @@
-
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-SQLALCHEMY_DATABASE_URL = "mysql://user:password@localhost/dbname"
+SQLALCHEMY_DATABASE_URL = "mysql+mysqlconnector://root:admin@localhost/enterprise"
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
